@@ -295,7 +295,9 @@ class barplot(object):
             self.df['color'] = self.df[self.item_column].map(colors)
         elif (self.item_color != None and len(self.item_color) != self.df[self.item_column].nunique()):
             for item in self.df[self.item_column].unique():
-                if item not in self.item_color.keys():
+                print("XXXX>>> ", self.item_color)
+                print("XXXX>>> ", type(self.item_color))
+                if item not in list(self.item_color.keys()):
                     self.item_color[item] = 'rgb({}, {}, {})'.format(*sample(range(256), 3))
             self.df['color'] = self.df[self.item_column].map(self.item_color)
         else:
