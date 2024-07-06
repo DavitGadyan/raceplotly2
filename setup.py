@@ -4,7 +4,7 @@ with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setuptools.setup(
-    name="raceplotly",
+    name="raceplot",
     version="0.1.7",
     author="Luis Chaves",
     author_email="lc5415@ic.ac.uk",
