@@ -113,8 +113,8 @@ class barplot(object):
                             hovertemplate = '<extra></extra>', #annoying and obscure, see docs
                             ## (https://community.plotly.com/t/remove-trace-0-next-to-hover/33731)
                             textposition='inside',
-                            texttemplate='%{x} xxx<br>%{y:.2s}' if self.orientation == 'vertical' else '%{y}<br>%{x:.4s}',
-                            textangle = 10,
+                            texttemplate='%{x} %{y:.2s}' if self.orientation == 'vertical' else '%{y} %{x:.2s}',
+                            textangle = 0,
                             orientation = 'h' if self.orientation == 'horizontal' else 'v'
                         )
                     ],
